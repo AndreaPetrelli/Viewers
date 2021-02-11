@@ -1,0 +1,14 @@
+{
+  "emptyFilenameError": "Il nome del file non può essere vuoto.",
+  "fileType": "Tipo file",
+  "filename": "Nome file",
+  "formTitle": "Specificare le dimensioni, il nome del file ed il tipo desiderato dell'immagine da salvare.",
+  "imageHeight": "Altezza (px)",
+  "imagePreview": "Anteprima immagine",
+  "imageWidth": "Larghezza (px)",
+  "keepAspectRatio": "Mantieni il rapporto",
+  "loadingPreview": "Caricamento dell'anteprima...",
+  "minHeightError": "L'altezza minima è di 100px.",
+  "minWidthError": "La larghezza minima è di 100px.",
+  "showAnnotations": "Mostra annotazioni"
+}

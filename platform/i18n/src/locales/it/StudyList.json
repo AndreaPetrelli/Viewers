@@ -1,0 +1,10 @@
+{
+  "AccessionNumber": "Numero di accesso",
+  "Empty": "Vuoto",
+  "MRN": "MRN",
+  "Modality": "Modalità",
+  "PatientName": "Nome paziente",
+  "StudyDate": "Data esame",
+  "StudyDescription": "Descrizione",
+  "StudyList": "Lista esami"
+}
