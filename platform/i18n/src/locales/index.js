@@ -1,4 +1,5 @@
 import de from './de/';
+import it from './it/';
 import en_US from './en-US/';
 import es from './es/';
 import fr from './fr/';
@@ -10,6 +11,7 @@ import vi from './vi/';
 import zh from './zh/';
 
 export default {
+  ...it,
   ...de,
   ...en_US,
   ...es,
