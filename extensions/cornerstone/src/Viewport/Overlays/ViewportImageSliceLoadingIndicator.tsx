@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Enums } from '@cornerstonejs/core';
+import { useTranslation } from 'react-i18next';
 
 function ViewportImageSliceLoadingIndicator({ viewportData, element }) {
+  const { t } = useTranslation('Common');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -68,7 +70,7 @@ function ViewportImageSliceLoadingIndicator({ viewportData, element }) {
       // interacting with the mouse, since scrolling should propagate to the viewport underneath
       <div className="pointer-events-none absolute top-0 left-0 h-full w-full bg-black opacity-50">
         <div className="transparent flex h-full w-full items-center justify-center">
-          <p className="text-primary-light text-xl font-light">Loading...</p>
+          <p className="text-primary-light text-xl font-light">{t('Loading...')}</p>
         </div>
       </div>
     );
