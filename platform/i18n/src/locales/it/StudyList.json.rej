@@ -1,0 +1,16 @@
+diff a/platform/i18n/src/locales/it/StudyList.json b/platform/i18n/src/locales/it/StudyList.json	(rejected hunks)
+@@ -9,12 +9,12 @@
+   "MRN": "MRN",
+   "Next": "Avanti >",
+   "No studies available": "Nessun esame disponibile",
+-  "Number of studies": "Numero degli esami",
++  "Number of studies": "Numero degli studi",
+   "Page": "Pagina",
+   "PatientName": "Nome paziente",
+   "Previous": "< Indietro",
+   "Results per page": "Risultati per pagina",
+   "StudyDate": "Data esame",
+-  "StudyList": "Lista esami",
++  "StudyList": "Lista studi",
+   "Upload": "Upload"
+ }

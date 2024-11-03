@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../Icon';
+import { useTranslation } from 'react-i18next';
 import Button, { ButtonEnums } from '../Button';
 
 export enum showDialogOption {
@@ -10,6 +11,7 @@ export enum showDialogOption {
 }
 
 const InvestigationalUseDialog = ({ dialogConfiguration }) => {
+  const { t } = useTranslation('InvestigationalUseDialog');
   const { option, days } = dialogConfiguration;
   const [isHidden, setIsHidden] = useState(true);
 
@@ -67,15 +69,15 @@ const InvestigationalUseDialog = ({ dialogConfiguration }) => {
           />
           <div className="flex flex-col">
             <div className="text-[19px] text-white">
-              OHIF Viewer is{' '}
-              <span className="text-primary-light">for investigational use only</span>
+              {t('OHIF Viewer is')}{' '}
+              <span className="text-primary-light">{t('for investigational use only')}</span>
             </div>
             <div className="text-[13px] text-white">
               <span
                 className="text-primary-active cursor-pointer"
                 onClick={() => window.open('https://ohif.org/', '_blank')}
               >
-                Learn more about OHIF Viewer
+                {t('Learn more about OHIF Viewer')}
               </span>
             </div>
           </div>
@@ -85,7 +87,7 @@ const InvestigationalUseDialog = ({ dialogConfiguration }) => {
           onClick={handleConfirmAndHide}
           className="bg-primary-main"
         >
-          Confirm and Hide
+          {t('Confirm and hide')}
         </Button>
       </div>
     </div>

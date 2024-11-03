@@ -1,0 +1,7 @@
+diff a/platform/i18n/src/locales/it/SidePanel.json b/platform/i18n/src/locales/it/SidePanel.json	(rejected hunks)
+@@ -1,4 +1,4 @@
+ {
+   "Measurements": "Misure",
+-  "Studies": "Esami"
++  "Studies": "Studi"
+ }
