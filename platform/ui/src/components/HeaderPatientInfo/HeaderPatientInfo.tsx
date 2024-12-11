@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from '@ohif/ui';
 import { utils } from '@ohif/core';
+import { useTranslation } from 'react-i18next';
 import { PatientInfoVisibility } from '../../types';
 
 const { formatDate, formatPN } = utils;
@@ -71,6 +72,7 @@ function usePatientInfo(servicesManager: AppTypes.ServicesManager) {
 }
 
 function HeaderPatientInfo({ servicesManager, appConfig }: withAppTypes) {
+  const { t } = useTranslation('Header');
   const initialExpandedState =
     appConfig.showPatientInfo === PatientInfoVisibility.VISIBLE ||
     appConfig.showPatientInfo === PatientInfoVisibility.VISIBLE_READONLY;
@@ -116,7 +118,7 @@ function HeaderPatientInfo({ servicesManager, appConfig }: withAppTypes) {
         ) : (
           <div className="text-primary-active self-center text-[13px]">
             {' '}
-            {isMixedPatients ? 'Multiple Patients' : 'Patient'}
+            {isMixedPatients ? t('Multiple patients') : t('Patient')}
           </div>
         )}
       </div>

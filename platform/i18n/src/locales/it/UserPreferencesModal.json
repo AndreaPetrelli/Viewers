@@ -1,0 +1,12 @@
+{
+  "Cancel": "$t(Buttons:Cancel)",
+  "No hotkeys found": "Nessun tasto di scleta rapida configurato per l'applicazione",
+  "Reset to defaults": "$t(Buttons:Reset to defaults)",
+  "ResetDefaultMessage": "Preferences successfully reset to default. <br /> You must <strong>Save</strong> to perform this action.",
+  "Save": "$t(Buttons:Save)",
+  "SaveMessage": "Preferenze salvate",
+  "User preferences": "Preferenze utente",
+  "Language": "Lingua",
+  "General": "Generali",
+  "Hotkeys": "Tasti di scelta rapida"
+}
