@@ -1,0 +1,20 @@
+{
+  "AccessionNumber": "Accession #",
+  "ClearFilters": "Pulisci filtri",
+  "Description": "Descrizione",
+  "Empty": "Vuoto",
+  "Filter list to 100 studies or less to enable sorting": "Filter the list to 100 studies or less to enable sorting",
+  "Instances": "Istanze",
+  "Modality": "Modalità",
+  "MRN": "MRN",
+  "Next": "Avanti >",
+  "No studies available": "Nessun esame disponibile",
+  "Number of studies": "Numero degli studi",
+  "Page": "Pagina",
+  "PatientName": "Nome paziente",
+  "Previous": "< Indietro",
+  "Results per page": "Risultati per pagina",
+  "StudyDate": "Data esame",
+  "StudyList": "Lista studi",
+  "Upload": "Upload"
+}
