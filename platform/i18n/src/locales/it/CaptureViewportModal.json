@@ -1,9 +1,9 @@
 {
-  "File name": "File name",
-  "Image size": "Image size",
-  "Image size in pixels": "Image size in pixels",
-  "Include annotations": "Include annotations",
-  "Include warning message": "Include warning message",
-  "Width": "Width",
-  "Height": "Height"
+  "File name": "Nome file",
+  "Image size": "Dimensione immagine",
+  "Image size in pixels": "Dimensione immagine in pixel",
+  "Include annotations": "Includi annotazioni",
+  "Include warning message": "Includi messaggio di avviso",
+  "Width": "Larghezza",
+  "Height": "Altezza"
 }

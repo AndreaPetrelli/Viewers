@@ -1,12 +1,12 @@
 {
-  "Primary": "Primary",
+  "Primary": "Primario",
   "Recent": "Recente",
   "All": "Tutti",
-  "Tracked Series": "Tracked Series",
-  "Tag Browser": "Tag Browser",
-  "Add as Layer": "Add as Layer",
-  "Series Number": "Series Number",
-  "Series Date": "Series Date",
-  "Thumbnail Double Click": "Thumbnail Double Click",
-  "The selected display sets could not be added to the viewport.": "The selected display sets could not be added to the viewport."
+  "Tracked Series": "Serie tracciate",
+  "Tag Browser": "Browser tag",
+  "Add as Layer": "Aggiungi come livello",
+  "Series Number": "Numero serie",
+  "Series Date": "Data serie",
+  "Thumbnail Double Click": "Doppio clic miniatura",
+  "The selected display sets could not be added to the viewport.": "I display set selezionati non possono essere aggiunti alla viewport."
 }

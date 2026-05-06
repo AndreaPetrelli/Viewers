@@ -1,14 +1,14 @@
 {
-  "emptyFilenameError": "The file name cannot be empty.",
-  "fileType": "File Type",
-  "filename": "File Name",
-  "formTitle": "Please specify the dimensions, filename, and desired type for the output image.",
-  "imageHeight": "Image height (px)",
-  "imagePreview": "Image Preview",
-  "imageWidth": "Image width (px)",
-  "keepAspectRatio": "Keep aspect ratio",
-  "loadingPreview": "Loading Image Preview...",
-  "minHeightError": "The minimum valid height is 100px.",
-  "minWidthError": "The minimum valid width is 100px.",
-  "showAnnotations": "Show Annotations"
+  "emptyFilenameError": "Il nome file non può essere vuoto.",
+  "fileType": "Tipo file",
+  "filename": "Nome file",
+  "formTitle": "Specifica dimensioni, nome file e tipo desiderato per l'immagine di output.",
+  "imageHeight": "Altezza immagine (px)",
+  "imagePreview": "Anteprima immagine",
+  "imageWidth": "Larghezza immagine (px)",
+  "keepAspectRatio": "Mantieni proporzioni",
+  "loadingPreview": "Caricamento anteprima immagine...",
+  "minHeightError": "L'altezza minima valida è 100 px.",
+  "minWidthError": "La larghezza minima valida è 100 px.",
+  "showAnnotations": "Mostra annotazioni"
 }
