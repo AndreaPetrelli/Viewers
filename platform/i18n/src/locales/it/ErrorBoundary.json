@@ -4,5 +4,6 @@
   "Something went wrong": "Qualcosa è andato storto",
   "in": "in",
   "Sorry, something went wrong there. Try again.": "Si è verificato un errore. Riprova.",
-  "Stack Trace": "Traccia dello stack"
+  "Stack Trace": "Traccia dello stack",
+  "Show Details": "Mostra dettagli"
 }
