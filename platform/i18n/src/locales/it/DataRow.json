@@ -1,10 +1,10 @@
 {
-  "Hide": "Hide",
-  "Show": "Show",
-  "Rename": "Rename",
-  "Duplicate": "Duplicate",
-  "Delete": "Delete",
-  "Change Color": "Change Color",
-  "Lock": "Lock",
-  "Unlock": "Unlock"
+  "Hide": "Nascondi",
+  "Show": "Mostra",
+  "Rename": "Rinomina",
+  "Duplicate": "Duplica",
+  "Delete": "Elimina",
+  "Change Color": "Cambia colore",
+  "Lock": "Blocca",
+  "Unlock": "Sblocca"
 }

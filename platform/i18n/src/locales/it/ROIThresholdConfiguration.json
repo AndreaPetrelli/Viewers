@@ -1,11 +1,11 @@
 {
   "Max": "Max",
-  "Range": "Range",
-  "Start": "Start",
-  "End": "End",
-  "Percentage of Max SUV": "Percentage of Max SUV",
-  "Lower & Upper Ranges": "Lower & Upper Ranges",
-  "Run": "Run",
-  "Threshold Tools": "Threshold Tools",
-  "ThresholdRange": "Threshold Range"
+  "Range": "Intervallo",
+  "Start": "Inizio",
+  "End": "Fine",
+  "Percentage of Max SUV": "Percentuale del SUV massimo",
+  "Lower & Upper Ranges": "Intervalli inferiore e superiore",
+  "Run": "Esegui",
+  "Threshold Tools": "Strumenti soglia",
+  "ThresholdRange": "Intervallo soglia"
 }

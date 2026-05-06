@@ -1,9 +1,11 @@
 {
-  "About": "About",
-  "Back to Viewer": "Back to Viewer",
-  "INVESTIGATIONAL USE ONLY": "INVESTIGATIONAL USE ONLY",
-  "Options": "Options",
-  "Preferences": "Preferences",
-  "Study list": "Study list",
-  "Logout": "Logout"
+  "About": "Informazioni",
+  "Back to Viewer": "Torna al viewer",
+  "INVESTIGATIONAL USE ONLY": "SOLO PER USO SPERIMENTALE",
+  "Options": "Opzioni",
+  "Preferences": "Preferenze",
+  "Study list": "Elenco studi",
+  "Multiple patients": "Più pazienti",
+  "Patient": "Paziente",
+  "Logout": "Disconnetti"
 }
