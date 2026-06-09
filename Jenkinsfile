@@ -39,6 +39,7 @@ pipeline {
       steps {
         sh '''
           set -eux
+          yarn config set workspaces-experimental true
           yarn install --frozen-lockfile
         '''
       }
