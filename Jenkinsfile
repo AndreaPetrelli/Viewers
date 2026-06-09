@@ -19,7 +19,7 @@ pipeline {
     NODE_ENV = 'production'
     QUICK_BUILD = 'false'
     DIST_DIR = 'platform/app/dist'
-    ARTIFACT_NAME = "ohif3-${RELEASE_VERSION}-${BUILD_NUMBER}.tar.gz"
+    ARTIFACT_NAME = "ohif3-${RELEASE_VERSION}.tar.gz"
   }
 
   stages {
