@@ -86,6 +86,11 @@ pipeline {
         echo "PUBLIC_URL=${PUBLIC_URL}"
         echo "APP_CONFIG=${APP_CONFIG}"
       '''
+
+      cleanWs(
+        deleteDirs: true,
+        disableDeferredWipeout: true
+      )
     }
   }
 }
