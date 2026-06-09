@@ -19,7 +19,7 @@ pipeline {
     NX_SKIP_NX_CACHE = 'true'
     QUICK_BUILD = 'false'
     DIST_DIR = 'platform/app/dist'
-    ARTIFACT_NAME = "ohif3-${RELEASE_VERSION}.tar.gz"
+    ARTIFACT_NAME = "ohif3-${RELEASE_VERSION}.zip"
   }
 
   stages {
@@ -77,10 +77,7 @@ pipeline {
 
     stage('Package Artifact') {
       steps {
-        sh '''
-          set -eux
-          tar -C "${DIST_DIR}" -czf "${ARTIFACT_NAME}" .
-        '''
+        zip zipFile: "${env.ARTIFACT_NAME}", dir: "${env.DIST_DIR}", overwrite: true
 
         archiveArtifacts artifacts: "${env.ARTIFACT_NAME}, ${env.DIST_DIR}/**", fingerprint: true
       }
