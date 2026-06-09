@@ -23,6 +23,14 @@ pipeline {
   }
 
   stages {
+    stage('Prepare Build') {
+      steps {
+        script {
+          currentBuild.displayName = "#${env.BUILD_NUMBER} - OHIF ${params.RELEASE_VERSION}"
+        }
+      }
+    }
+
     stage('Validate Toolchain') {
       steps {
         sh '''
