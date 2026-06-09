@@ -77,7 +77,12 @@ pipeline {
 
     stage('Package Artifact') {
       steps {
-        zip zipFile: "${env.ARTIFACT_NAME}", dir: "${env.DIST_DIR}", overwrite: true
+        sh '''
+          set -eux
+          rm -f "${ARTIFACT_NAME}"
+          cd "${DIST_DIR}"
+          zip -r "../../../${ARTIFACT_NAME}" .
+        '''
 
         archiveArtifacts artifacts: "${env.ARTIFACT_NAME}, ${env.DIST_DIR}/**", fingerprint: true
       }
