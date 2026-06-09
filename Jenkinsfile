@@ -16,7 +16,6 @@ pipeline {
   }
 
   environment {
-    NODE_ENV = 'production'
     QUICK_BUILD = 'false'
     DIST_DIR = 'platform/app/dist'
     ARTIFACT_NAME = "ohif3-${RELEASE_VERSION}.tar.gz"
@@ -41,7 +40,7 @@ pipeline {
         sh '''
           set -eux
           yarn config set workspaces-experimental true
-          yarn install --frozen-lockfile
+          yarn install --frozen-lockfile --production=false
         '''
       }
     }
@@ -57,7 +56,7 @@ pipeline {
 
           PUBLIC_URL="${PUBLIC_URL}" \
           APP_CONFIG="${APP_CONFIG}" \
-          NODE_ENV="${NODE_ENV}" \
+          NODE_ENV="production" \
           QUICK_BUILD="${QUICK_BUILD}" \
           yarn run build
 
