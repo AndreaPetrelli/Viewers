@@ -16,6 +16,7 @@ pipeline {
   }
 
   environment {
+    NX_SKIP_NX_CACHE = 'true'
     QUICK_BUILD = 'false'
     DIST_DIR = 'platform/app/dist'
     ARTIFACT_NAME = "ohif3-${RELEASE_VERSION}.tar.gz"
@@ -57,6 +58,7 @@ pipeline {
           PUBLIC_URL="${PUBLIC_URL}" \
           APP_CONFIG="${APP_CONFIG}" \
           NODE_ENV="production" \
+          NX_SKIP_NX_CACHE="${NX_SKIP_NX_CACHE}" \
           QUICK_BUILD="${QUICK_BUILD}" \
           yarn run build
 
@@ -89,8 +91,11 @@ pipeline {
 
       cleanWs(
         deleteDirs: true,
-        disableDeferredWipeout: true
+        disableDeferredWipeout: true,
+        notFailBuild: true
       )
+
+      deleteDir()
     }
   }
 }
