@@ -89,12 +89,6 @@ pipeline {
         echo "APP_CONFIG=${APP_CONFIG}"
       '''
 
-      cleanWs(
-        deleteDirs: true,
-        disableDeferredWipeout: true,
-        notFailBuild: true
-      )
-
       deleteDir()
     }
   }
