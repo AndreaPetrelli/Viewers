@@ -8,6 +8,7 @@ pipeline {
   }
 
   parameters {
+    string(name: 'RELEASE_VERSION', defaultValue: '3.12.4', description: 'OHIF release version used to name the artifact.')
     string(name: 'PUBLIC_URL', defaultValue: '/assets/ohif3/', description: 'Public URL used by OHIF for generated assets.')
     string(name: 'APP_CONFIG', defaultValue: 'config/default.js', description: 'OHIF app config, relative to platform/app/public.')
     booleanParam(name: 'INSTALL_DEPS', defaultValue: true, description: 'Run yarn install --frozen-lockfile before building.')
@@ -18,7 +19,7 @@ pipeline {
     NODE_ENV = 'production'
     QUICK_BUILD = 'false'
     DIST_DIR = 'platform/app/dist'
-    ARTIFACT_NAME = "ohif3-${BUILD_NUMBER}.tar.gz"
+    ARTIFACT_NAME = "ohif3-${RELEASE_VERSION}-${BUILD_NUMBER}.tar.gz"
   }
 
   stages {
