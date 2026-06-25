@@ -1,0 +1,18 @@
+{
+  "Display Set Messages": "Messaggi del display set",
+  "1": "Nella serie non sono state trovate istanze valide.",
+  "2": "Il display set ha informazioni di posizione mancanti.",
+  "3": "Il display set non è un volume 3D ricostruibile.",
+  "4": "I display set multiframe non hanno informazioni di misura dei pixel.",
+  "5": "I display set multiframe non hanno informazioni di orientamento.",
+  "6": "I display set multiframe non hanno informazioni di posizione.",
+  "7": "Il display set ha frame mancanti.",
+  "8": "Il display set ha una spaziatura irregolare.",
+  "9": "Il display set ha dimensioni incoerenti tra i frame.",
+  "10": "Il display set ha frame con un numero incoerente di componenti.",
+  "11": "Il display set ha frame con orientamenti incoerenti.",
+  "12": "Il display set ha informazioni di posizione incoerenti.",
+  "13": "Display set non supportato.",
+  "14": "SOP Class UID {{ sopClassUid }} non è supportato.",
+  "15": "Nel display set manca una SOP Class UID. Controlla il file."
+}

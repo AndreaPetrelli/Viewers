@@ -1,0 +1,12 @@
+{
+  "Appearance": "Aspetto",
+  "Theme": "Tema",
+  "Default Theme": "Tonalità: blu OHIF",
+  "Custom": "Personalizzato",
+  "Custom Theme": "Tema personalizzato",
+  "Hide": "Nascondi",
+  "Apply": "Applica",
+  "Clear": "Cancella",
+  "No valid theme tokens found": "Nessun token di tema valido trovato. Sono previste righe come --primary: 220 90% 60%",
+  "Paste your custom theme color tokens here": "Incolla qui i token colore del tema personalizzato"
+}

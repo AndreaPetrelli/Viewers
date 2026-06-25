@@ -5,6 +5,7 @@ import en_US from './en-US/';
 import es from './es/';
 import fr from './fr/';
 import ja_JP from './ja-JP/';
+import it from './it/';
 import nl from './nl/';
 import pt_BR from './pt-BR/';
 import ru from './ru/';
@@ -20,6 +21,7 @@ export default {
   ...es,
   ...fr,
   ...ja_JP,
+  ...it,
   ...nl,
   ...pt_BR,
   ...ru,

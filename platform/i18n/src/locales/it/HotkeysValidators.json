@@ -1,0 +1,6 @@
+{
+  "Field can't be empty": "Il campo non può essere vuoto",
+  "Hotkey is already in use": "\"{{action}}\" sta già usando la scorciatoia \"{{pressedKeys}}\".",
+  "It's not possible to define only modifier keys (ctrl, alt and shift) as a shortcut": "Non è possibile definire come scorciatoia solo tasti modificatori (ctrl, alt e shift)",
+  "Shortcut combination is not allowed": "La combinazione di tasti {{pressedKeys}} non è consentita"
+}
