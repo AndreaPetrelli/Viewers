@@ -44,7 +44,9 @@ pipeline {
           node --version
           node -e 'const major = Number(process.versions.node.split(".")[0]); if (major < Number(process.env.MINIMUM_NODE_MAJOR)) { console.error(`Node ${process.env.MINIMUM_NODE_MAJOR}+ is required`); process.exit(1); }'
           corepack --version
-          test "$(corepack pnpm --version)" = "${PNPM_VERSION}"
+          corepack enable
+          corepack install --global "pnpm@${PNPM_VERSION}"
+          test "$(pnpm --version)" = "${PNPM_VERSION}"
         '''
       }
     }
@@ -56,7 +58,7 @@ pipeline {
       steps {
         sh '''
           set -eux
-          corepack pnpm install --frozen-lockfile
+          pnpm install --frozen-lockfile
         '''
       }
     }
@@ -75,7 +77,7 @@ pipeline {
           NODE_ENV="production" \
           NX_SKIP_NX_CACHE="${NX_SKIP_NX_CACHE}" \
           QUICK_BUILD="${QUICK_BUILD}" \
-          corepack pnpm run build
+          pnpm run build
 
           test -f "${DIST_DIR}/index.html"
         '''
