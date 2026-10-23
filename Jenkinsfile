@@ -1,6 +1,10 @@
 pipeline {
   agent any
 
+  tools {
+    nodejs 'Node 24.22.1'
+  }
+
   options {
     timestamps()
     buildDiscarder(logRotator(numToKeepStr: '20', artifactNumToKeepStr: '20'))
@@ -16,7 +20,7 @@ pipeline {
   }
 
   environment {
-    REQUIRED_NODE_VERSION = '24.15.0'
+    MINIMUM_NODE_MAJOR = '24'
     PNPM_VERSION = '12.8.1'
     NX_SKIP_NX_CACHE = 'true'
     QUICK_BUILD = 'false'
@@ -38,11 +42,9 @@ pipeline {
         sh '''
           set -eux
           node --version
-          test "$(node --version)" = "v${REQUIRED_NODE_VERSION}"
+          node -e 'const major = Number(process.versions.node.split(".")[0]); if (major < Number(process.env.MINIMUM_NODE_MAJOR)) { console.error(`Node ${process.env.MINIMUM_NODE_MAJOR}+ is required`); process.exit(1); }'
           corepack --version
-          corepack enable
-          corepack prepare "pnpm@${PNPM_VERSION}" --activate
-          pnpm --version
+          test "$(corepack pnpm --version)" = "${PNPM_VERSION}"
         '''
       }
     }
@@ -54,7 +56,7 @@ pipeline {
       steps {
         sh '''
           set -eux
-          pnpm install --frozen-lockfile
+          corepack pnpm install --frozen-lockfile
         '''
       }
     }
@@ -73,7 +75,7 @@ pipeline {
           NODE_ENV="production" \
           NX_SKIP_NX_CACHE="${NX_SKIP_NX_CACHE}" \
           QUICK_BUILD="${QUICK_BUILD}" \
-          pnpm run build
+          corepack pnpm run build
 
           test -f "${DIST_DIR}/index.html"
         '''
