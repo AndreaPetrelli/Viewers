@@ -80,6 +80,11 @@ pipeline {
           pnpm run build
 
           test -f "${DIST_DIR}/index.html"
+
+          # Client-side AI/SAM is not exposed in this distribution. Remove the
+          # ONNX Runtime payload before packaging to keep the artifact lean.
+          rm -rf "${DIST_DIR}/ort"
+          test ! -e "${DIST_DIR}/ort"
         '''
       }
     }
