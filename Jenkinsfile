@@ -8,14 +8,16 @@ pipeline {
   }
 
   parameters {
-    string(name: 'RELEASE_VERSION', defaultValue: '3.12.4', description: 'OHIF release version used to name the artifact.')
+    string(name: 'RELEASE_VERSION', defaultValue: '3.13.13', description: 'OHIF release version used to name the artifact.')
     string(name: 'PUBLIC_URL', defaultValue: '/assets/ohif3/', description: 'Public URL used by OHIF for generated assets.')
     string(name: 'APP_CONFIG', defaultValue: 'config/default.js', description: 'OHIF app config, relative to platform/app/public.')
-    booleanParam(name: 'INSTALL_DEPS', defaultValue: true, description: 'Run yarn install --frozen-lockfile before building.')
+    booleanParam(name: 'INSTALL_DEPS', defaultValue: true, description: 'Run pnpm install --frozen-lockfile before building.')
     booleanParam(name: 'CLEAN_DIST', defaultValue: true, description: 'Remove platform/app/dist before building.')
   }
 
   environment {
+    REQUIRED_NODE_VERSION = '24.15.0'
+    PNPM_VERSION = '12.8.1'
     NX_SKIP_NX_CACHE = 'true'
     QUICK_BUILD = 'false'
     DIST_DIR = 'platform/app/dist'
@@ -36,7 +38,11 @@ pipeline {
         sh '''
           set -eux
           node --version
-          yarn --version
+          test "$(node --version)" = "v${REQUIRED_NODE_VERSION}"
+          corepack --version
+          corepack enable
+          corepack prepare "pnpm@${PNPM_VERSION}" --activate
+          pnpm --version
         '''
       }
     }
@@ -48,8 +54,7 @@ pipeline {
       steps {
         sh '''
           set -eux
-          yarn config set workspaces-experimental true
-          yarn install --frozen-lockfile --production=false
+          pnpm install --frozen-lockfile
         '''
       }
     }
@@ -68,7 +73,7 @@ pipeline {
           NODE_ENV="production" \
           NX_SKIP_NX_CACHE="${NX_SKIP_NX_CACHE}" \
           QUICK_BUILD="${QUICK_BUILD}" \
-          yarn run build
+          pnpm run build
 
           test -f "${DIST_DIR}/index.html"
         '''
